@@ -11,4 +11,8 @@ describe AnagramFinder do
 		expect(finder.generate_signature("pan's")).to eq signature
 		expect(finder.generate_signature("pAn's")).to eq signature
 	end
+
+	it 'returns all the anagrams for "pans"' do
+		expect(finder.get_anagrams("pans").count).to eq 3
+	end
 end
